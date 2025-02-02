@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: arcadia_api
+Version: 2.0.1
+Requires-Dist: requests
+Requires-Dist: pillow
+Requires-Dist: tqdm

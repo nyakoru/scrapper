@@ -1,0 +1,2 @@
+2024-12-15 21:33:16,565 - INFO - func process_3_verification, input: ('testgame',), {}
+2024-12-15 21:33:16,583 - INFO - func process_4_verification, input: ('testgame',), {'image_data_check': True}

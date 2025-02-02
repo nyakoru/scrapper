@@ -1,0 +1,91 @@
+[
+    {
+        "name": "Monkey.D.Luffy",
+        "description": "[DON!! x2] [Your Turn] This Character gains +2000 power.",
+        "product_code": "P-006",
+        "rarity": "P",
+        "metadata": {
+            "card_type": "CHARACTER",
+            "cost": "3",
+            "attribute": "Strike",
+            "power": "3000",
+            "counter": "2000",
+            "color": "Red",
+            "type": [
+                "Supernovas",
+                "Straw Hat Crew"
+            ]
+        }
+    },
+    {
+        "name": "Monkey.D.Luffy",
+        "description": "[DON!! x1] This Character cannot be K.O.'d in battle by ＜Strike＞ attribute Leaders or Characters.",
+        "product_code": "P-007",
+        "rarity": "P",
+        "metadata": {
+            "card_type": "CHARACTER",
+            "cost": "4",
+            "attribute": "Strike",
+            "power": "5000",
+            "counter": "1000",
+            "color": "Red",
+            "type": [
+                "Supernovas",
+                "Straw Hat Crew"
+            ]
+        }
+    },
+    {
+        "name": "Yamato",
+        "description": "[Activate: Main] You may rest this Character: Rest 1 of your opponent's Characters with a cost of 2 or less.",
+        "product_code": "P-008",
+        "rarity": "P",
+        "metadata": {
+            "card_type": "CHARACTER",
+            "cost": "3",
+            "attribute": "Strike",
+            "power": "5000",
+            "counter": "-",
+            "color": "Green",
+            "type": [
+                "Land of Wano"
+            ]
+        }
+    },
+    {
+        "name": "Trafalgar Law",
+        "description": "[On Play] If your opponent has 6 or more cards in their hand, your opponent adds 1 card from their Life area to their hand.",
+        "product_code": "P-009",
+        "rarity": "P",
+        "metadata": {
+            "card_type": "CHARACTER",
+            "cost": "6",
+            "attribute": "Slash",
+            "power": "7000",
+            "counter": "-",
+            "color": "Blue",
+            "type": [
+                "Supernovas",
+                "Heart Pirates"
+            ]
+        }
+    },
+    {
+        "name": "Kaido",
+        "description": "[End of Your Turn] Add 1 DON!! card from your DON!! deck and set it as active.",
+        "product_code": "P-010",
+        "rarity": "P",
+        "metadata": {
+            "card_type": "CHARACTER",
+            "cost": "8",
+            "attribute": "Special",
+            "power": "9000",
+            "counter": "-",
+            "color": "Purple",
+            "type": [
+                "The Four Emperors",
+                "Animal Kingdom Pirates"
+            ]
+        }
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "name": "testimg_b",
+        "description": "#000000 image",
+        "product_code": "DT-1",
+        "rarity": "B",
+        "metadata": {
+            "key_1": "value_1",
+            "key_2": "value_2"
+        },
+        "id": "8859b507-b241-4e04-b8fc-d498bdc6c3d9",
+        "image_id": "bde798f2-1108-4b23-965e-2356f4f27b8a"
+    },
+    {
+        "name": "testimg_w",
+        "description": "#FFFFFF image",
+        "product_code": "DT-2",
+        "rarity": "W",
+        "metadata": {
+            "key_1": "value_1",
+            "key_2": [
+                "element_1",
+                "element_2"
+            ],
+            "note":"the data that doesn't fit in the above 4, fits here. E.g. 'metadata': { 'atk':400, 'def':200, 'illustrator':'someguy' "
+        },
+        "id": "e6bb8ea8-3414-4bdd-9743-fa10957cb703",
+        "image_id": "8c72ef24-d374-4306-a28f-1f08ffdd7495"
+    }
+]

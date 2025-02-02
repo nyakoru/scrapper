@@ -1,0 +1,12 @@
+[
+    {
+        "fruit": "apple",
+        "vehicle": "car"
+    },
+    [
+        {
+            "fruit": "apple",
+            "vehicle": "car"
+        }
+    ]
+]

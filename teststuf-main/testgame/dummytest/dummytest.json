@@ -1,0 +1,22 @@
+[
+    {
+        "name": "testimg_b",
+        "description": "#000000 image",
+        "product_code": "DT-1",
+        "rarity": "B",
+        "metadata": {
+            "key_1":"value_1",
+            "key_2":"value_2"
+        }
+    },
+    {
+        "name": "testimg_w",
+        "description": "#FFFFFF image",
+        "product_code": "DT-2",
+        "rarity": "W",
+        "metadata": {
+            "key_1":"value_1",
+            "key_2":["element_1","element_2"]
+        }
+    }
+]

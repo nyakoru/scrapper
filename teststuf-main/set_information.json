@@ -1,0 +1,22 @@
+{
+    "setname":"test",
+    "set_description":null,
+    "set_product_code":"DT",
+    "release_date":"31-12-1969",
+    "total":147,
+    "completed":0,
+    "variant_id":null,
+    "set_id":null,
+    "status":"published",
+    "recurring":true,
+    "errors":[
+        120,130
+    ],
+    "card_sized_image":null,
+    "banner_sized_image":null,
+    "uploaded_set":false,
+    "uploaded_cards":false,
+    "uploaded_csi":false,
+    "uploaded_bsi":false,
+    "patch_needed":[100]
+}
