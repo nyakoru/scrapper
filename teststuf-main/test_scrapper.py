@@ -15,14 +15,14 @@ if mode == 'scrape':
     s = Service('C:/Users/tanwe/Desktop/scrapper/teststuf-main/tmp/chromedriver/chromedriver.exe') ###Directory of your chromedriver.exe
     driver = webdriver.Chrome(service = s)
     driver.get('https://en.cf-vanguard.com/cardlist/cardsearch/?regulation=D&nation=&clan=&keyword=&keyword_type%5B%5D=all&kind%5B%5D=all&grade%5B%5D=all&power_from=&power_to=&rare=&trigger%5B%5D=all')
-    time.sleep(5)
+    time.sleep(3)
     driver.find_element(By.XPATH,"//button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']").click() #click to pass cookie wall
-    time.sleep(5)
+    time.sleep(4)
     previous_height = driver.execute_script('return document.body.scrollHeight')
 
     while True:
         driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
-        time.sleep(5)
+        time.sleep(4)
         new_height = driver.execute_script('return document.body.scrollHeight')
         if new_height == previous_height:
             break
@@ -35,6 +35,7 @@ if mode == 'scrape':
     f.close()
 
     ###Scrapping for DivineZ standard regulation
+'''
     s = Service('C:/Users/tanwe/Desktop/scrapper/teststuf-main/tmp/chromedriver/chromedriver.exe') ###Directory of your chromedriver.exe
     driver = webdriver.Chrome(service = s)
     driver.get('https://en.cf-vanguard.com/cardlist/cardsearch/?regulation=D&nation=&clan=&keyword=dz&keyword_type%5B%5D=all&kind%5B%5D=all&grade%5B%5D=all&power_from=&power_to=&rare=&trigger%5B%5D=all')
@@ -56,6 +57,8 @@ if mode == 'scrape':
     f.write(page_source)
     f.close()
 
+'''
+
 def scrape_names(f_name):
 
     f = open(f_name, "r", encoding= "utf-8")
@@ -68,7 +71,7 @@ def scrape_names(f_name):
 
     for item in items:
         item_out = {}
-        if "/cardlist/?cardno=" in item['href']:
+        if "/cardlist/?cardno=D" in item['href']: ##Only D standard released cards to avoid old backwards compatible cards
             all_card_lst.append(item['href'])
     return all_card_lst
 
@@ -76,4 +79,3 @@ def scrape_names(f_name):
 ### Bs4 test
 if mode != 'scrape':
     all_d_sets =  scrape_names(path_to_file + "source.txt")
-    all_dz_sets = scrape_names(path_to_file + "source_z.txt")
