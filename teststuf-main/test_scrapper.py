@@ -8,9 +8,9 @@ from bs4 import BeautifulSoup
 
 mode = 'scrape'  ##change accordingly
 
-
-
 path_to_file = r'C:\Users\tanwe\Desktop\scrapper\\'
+
+
 if mode == 'scrape':
     s = Service('C:/Users/tanwe/Desktop/scrapper/teststuf-main/tmp/chromedriver/chromedriver.exe') ###Directory of your chromedriver.exe
     driver = webdriver.Chrome(service = s)
