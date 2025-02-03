@@ -79,3 +79,5 @@ def scrape_names(f_name):
 ### Bs4 test
 if mode != 'scrape':
     all_d_sets =  scrape_names(path_to_file + "source.txt")
+
+##Test
