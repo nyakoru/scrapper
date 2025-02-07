@@ -8,21 +8,21 @@ from bs4 import BeautifulSoup
 
 mode = 'scrape'  ##change accordingly
 
-path_to_file = r'C:\Users\tanwe\OneDrive\Documents\GitHub\scrapper'  ###Path where you want your source.txt to be
+path_to_file = r'C:/Users/tanwe/Desktop/scrapper/'  ###Path where you want your source.txt to be
 
 
 if mode == 'scrape':
-    s = Service('C:/Users/tanwe/OneDrive/Documents/GitHub/scrapper/teststuf-main/tmp/chromedriver/chromedriver.exe') ###Directory of your chromedriver.exe
+    s = Service('C:/Users/tanwe/Desktop/scrapper/teststuf-main/tmp/chromedriver/chromedriver.exe') ###Directory of your chromedriver.exe
     driver = webdriver.Chrome(service = s)
     driver.get('https://en.cf-vanguard.com/cardlist/cardsearch/?regulation=D&nation=&clan=&keyword=&keyword_type%5B%5D=all&kind%5B%5D=all&grade%5B%5D=all&power_from=&power_to=&rare=&trigger%5B%5D=all')
     time.sleep(3)
     driver.find_element(By.XPATH,"//button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']").click() #click to pass cookie wall
-    time.sleep(4)
+    time.sleep(5)
     previous_height = driver.execute_script('return document.body.scrollHeight')
 
     while True:
         driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
-        time.sleep(4)
+        time.sleep(5)
         new_height = driver.execute_script('return document.body.scrollHeight')
         if new_height == previous_height:
             break
