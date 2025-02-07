@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from command.tools.ArcaneUtils import fetch_json
+
 
 class extract_info():
 
@@ -48,7 +48,7 @@ class extract_info():
         flavor = soup.find('div', class_ = "flavor")
         rarity = soup.find('div', class_ = "rarity")
 
-        card = {
+        card_info = {
         "serial number": serial_number.text,
         "name": name.text,
         "type": typ.text,
@@ -63,6 +63,7 @@ class extract_info():
         "flavor": flavor.text,
         "rarity": rarity.text
         }
+        return card_info
 
 
 

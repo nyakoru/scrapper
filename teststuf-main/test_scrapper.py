@@ -3,8 +3,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
-import pandas as pd
 from bs4 import BeautifulSoup
+from cfv_sorter_link_scrapper import extract_info
+from command.tools.ArcaneUtils import fetch_json
 
 mode = 'extract'  ##change accordingly
 
@@ -71,7 +72,7 @@ def scrape_names(f_name):
 
     for item in items:
         item_out = {}
-        if "/cardlist/?cardno=D" in item['href']: ##Only D standard released cards to avoid old backwards compatible cards
+        if "/cardlist/?cardno=" in item['href']: ##Only D standard released cards to avoid old backwards compatible cards
             all_card_lst.append(item['href'])
     return all_card_lst
 
@@ -79,6 +80,13 @@ def scrape_names(f_name):
 ### Bs4 test
 if mode != 'scrape':
     all_d_sets =  scrape_names(path_to_file + "source.txt")
-    print(all_d_sets)
+    all_cards = []
+    
+    for website in all_d_sets:
+        wbp = extract_info(website)
+        all_cards.append(wbp.get_info())
+        break
+    print(all_cards)
+
 
 ##Test
