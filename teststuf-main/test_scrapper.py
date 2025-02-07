@@ -6,7 +6,7 @@ import time
 import pandas as pd
 from bs4 import BeautifulSoup
 
-mode = 'scrape'  ##change accordingly
+mode = 'extract'  ##change accordingly
 
 path_to_file = r'C:/Users/tanwe/Desktop/scrapper/'  ###Path where you want your source.txt to be
 
@@ -79,5 +79,6 @@ def scrape_names(f_name):
 ### Bs4 test
 if mode != 'scrape':
     all_d_sets =  scrape_names(path_to_file + "source.txt")
+    print(all_d_sets)
 
 ##Test
