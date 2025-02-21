@@ -81,12 +81,19 @@ def scrape_names(f_name):
 if mode != 'scrape':
     all_d_sets =  scrape_names(path_to_file + "source.txt")
     all_cards = []
-    
+ 
     for website in all_d_sets:
         wbp = extract_info(website)
-        all_cards.append(wbp.get_info())
-        break
-    print(all_cards)
+        card_data = wbp.get_info()
+        print(card_data['serial number'])
+        serial_num = card_data['serial number']
+        set_num = serial_num.split('/')
+        set_num = set_num[0]
+        file = fetch_json(directory = "", file_name = f"cfv {set_num}_scrapper")
+        file.add(card_data)
+        print("Card added into db")
+
+
 
 
 ##Test

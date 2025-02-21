@@ -1,0 +1,62 @@
+[
+    {
+        "serial number": "BSF2022/VGD01EN",
+        "name": "Balance Wiggler",
+        "type": "Normal Unit",
+        "nation": "Dark States",
+        "race": "Demon",
+        "grade": "Grade 1",
+        "power": "Power 8000",
+        "critical": "Critical 1",
+        "shield": "Shield 5000",
+        "skill": "Boost",
+        "effect": "[AUTO]:When this unit is placed on (RC), [COST][Counter-Blast 1], and perform the following according to the number of your opponent's rear-guards・Two or less ‐ This unit gets [Power] +5000 until end of turn. ・Three or more ‐ Choose one of your opponent's front row rear-guard, and retire it.",
+        "flavor": "Degeneration or prosperity. Which side shall the scales tip to tonight?",
+        "rarity": "PR"
+    },
+    {
+        "serial number": "BSF2022/VGD01SEN",
+        "name": "Balance Wiggler",
+        "type": "Normal Unit",
+        "nation": "Dark States",
+        "race": "Demon",
+        "grade": "Grade 1",
+        "power": "Power 8000",
+        "critical": "Critical 1",
+        "shield": "Shield 5000",
+        "skill": "Boost",
+        "effect": "[AUTO]:When this unit is placed on (RC), [COST][Counter-Blast 1], and perform the following according to the number of your opponent's rear-guards・Two or less ‐ This unit gets [Power] +5000 until end of turn. ・Three or more ‐ Choose one of your opponent's front row rear-guard, and retire it.",
+        "flavor": "Degeneration or prosperity. Which side shall the scales tip to tonight?",
+        "rarity": "PR"
+    },
+    {
+        "serial number": "BSF2022/VGD02EN",
+        "name": "Flarestrike Dragon",
+        "type": "Normal Unit",
+        "nation": "Dragon Empire",
+        "race": "Flame Dragon",
+        "grade": "Grade 2",
+        "power": "Power 10000",
+        "critical": "Critical 1",
+        "shield": "Shield 5000",
+        "skill": "Intercept",
+        "effect": "[AUTO]:When this unit is placed on (RC), [COST][Counter-Blast 1], choose one of your vanguards, and it gets [Power] +10000 until end of turn.",
+        "flavor": "You shall be the one to take on my flames.",
+        "rarity": "PR"
+    },
+    {
+        "serial number": "BSF2022/VGD03EN",
+        "name": "Knight of War Damage, Fosado",
+        "type": "Normal Unit",
+        "nation": "Keter Sanctuary",
+        "race": "Elf",
+        "grade": "Grade 3",
+        "power": "Power 13000",
+        "critical": "Critical 1",
+        "shield": "Shield ",
+        "skill": "Twin Drive, Persona Ride",
+        "effect": "[CONT](RC):This unit cannot be chosen by your opponent's card effects.[AUTO](RC):When this unit's attack hits, [Counter-Charge 1]/[Soul-Charge 1].",
+        "flavor": "",
+        "rarity": "PR"
+    }
+]

@@ -47,9 +47,15 @@ class extract_info():
         effect = soup.find('div', class_ = "effect")
         flavor = soup.find('div', class_ = "flavor")
         rarity = soup.find('div', class_ = "rarity")
+        
+        try:
+            serial_num = serial_number.text
+        except:
+            serial_num = "No serial number"
+            print(self)
 
         card_info = {
-        "serial number": serial_number.text,
+        "serial number": serial_num,
         "name": name.text,
         "type": typ.text,
         "nation": nation.text,
