@@ -9295,7 +9295,7 @@
         "critical": "Critical 1",
         "shield": "Shield 5000",
         "skill": "Intercept",
-        "effect": "[ACT](Drop):If you have a grade 3 or greater vanguard with \"Vyrgilla\" in its card name, [COST][bind this card], choose a \"Ezelwur\" from your (RC), and until end of your opponent's next turn, that unit cannot be chosen by your opponent's card effects, and gets [Power] +5000/[Shield] +5000.[CONT](GC):If you have a vanguard with \"Vyrgilla\" in its card name, this unit gets [Shield] +5000.",
+        "effect": "[ACT](Drop):If you have a grade 3 or greater vanguard with \"Vyrgilla\" in its card name, [COST][bind this card], choose a \"Ezerwur\" from your (RC), and until end of your opponent's next turn, that unit cannot be chosen by your opponent's card effects, and gets [Power] +5000/[Shield] +5000.[CONT](GC):If you have a vanguard with \"Vyrgilla\" in its card name, this unit gets [Shield] +5000.",
         "flavor": "The brave soul of the dragon becomes a sword that never burns out.",
         "rarity": "PR"
     },
@@ -9310,7 +9310,7 @@
         "critical": "Critical 1",
         "shield": "Shield 5000",
         "skill": "Intercept",
-        "effect": "[ACT](Drop):If you have a grade 3 or greater vanguard with \"Vyrgilla\" in its card name, [COST][bind this card], choose a \"Ezelwur\" from your (RC), and until end of your opponent's next turn, that unit cannot be chosen by your opponent's card effects, and gets [Power] +5000/[Shield] +5000.[CONT](GC):If you have a vanguard with \"Vyrgilla\" in its card name, this unit gets [Shield] +5000.",
+        "effect": "[ACT](Drop):If you have a grade 3 or greater vanguard with \"Vyrgilla\" in its card name, [COST][bind this card], choose a \"Ezerwur\" from your (RC), and until end of your opponent's next turn, that unit cannot be chosen by your opponent's card effects, and gets [Power] +5000/[Shield] +5000.[CONT](GC):If you have a vanguard with \"Vyrgilla\" in its card name, this unit gets [Shield] +5000.",
         "flavor": "",
         "rarity": "PR"
     },
