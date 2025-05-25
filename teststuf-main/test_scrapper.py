@@ -6,6 +6,7 @@ import time
 from bs4 import BeautifulSoup
 from cfv_sorter_link_scrapper import extract_info
 from command.tools.ArcaneUtils import fetch_json
+import os
 
 mode = 'extract'  ##change accordingly
 
@@ -25,6 +26,7 @@ if mode == 'scrape':
         driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
         time.sleep(5)
         new_height = driver.execute_script('return document.body.scrollHeight')
+        time.sleep(3)
         if new_height == previous_height:
             break
         previous_height = new_height
@@ -91,8 +93,12 @@ if mode != 'scrape':
                 serial_num = card_data['serial number']
                 set_num = serial_num.split('/')
                 set_num = set_num[0]
-                file = fetch_json(directory = "", file_name = f"cfv {set_num}_scrapper")
-                file.add(card_data)
+                folder_name = f"{set_num}"
+                if not os.path.exists(folder_name):
+                    os.makedirs(folder_name)
+                wbp.get_img("C:/Users/tanwe/Desktop/scrapper/teststuf-main", serial_num)
+                ##file = fetch_json(directory = f"{set_num}", file_name = f"cfv {set_num}_scrapper") ###Change directory accordingly
+                ##file.add(card_data)
                 print("Card added into db")
                 break
             

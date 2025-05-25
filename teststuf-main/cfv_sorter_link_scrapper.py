@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import os
 
 
 class extract_info():
@@ -9,7 +10,7 @@ class extract_info():
         self.url = 'https://en.cf-vanguard.com' + url
         self.page = requests.get(self.url)
     
-    def get_img(self):  ##image scrape
+    def get_img(self, path_to_file, serial_code):  ##image scrape
         soup = BeautifulSoup(self.page.content, 'html.parser')
         card_website = self.url.split('/')
         for parts in card_website:
@@ -18,15 +19,14 @@ class extract_info():
                 break
         card_code = card_code.split("cardno=")[1] ##card number is in nested index 1
         card_code = ''.join(filter(str.isalnum, card_code)) ###remove the dash sign
-        card_code = card_code.lower() ##lower cast for the links
+        print(card_code)
         images = soup.findAll('img')
         for image in images:
-            if card_code in image['src']:
+            if "cardlist" in image['src']:
                 lk = "https://en.cf-vanguard.com" + image['src']
-                nme = image['alt']
                 break
-        
-        with open(nme + '.jpg', 'wb') as f:
+        path_to_file = os.path.join(path_to_file, serial_code) ##direct to the exact location
+        with open(path_to_file + '.png', 'wb') as f: ##ensure data is an image
             im = requests.get(lk)
             f.write(im.content)
             f.close()
