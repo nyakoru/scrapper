@@ -97,8 +97,8 @@ if mode != 'scrape':
                 if not os.path.exists(folder_name):
                     os.makedirs(folder_name)
                 wbp.get_img("C:/Users/tanwe/Desktop/scrapper/teststuf-main", serial_num)
-                ##file = fetch_json(directory = f"{set_num}", file_name = f"cfv {set_num}_scrapper") ###Change directory accordingly
-                ##file.add(card_data)
+                file = fetch_json(directory = f"{set_num}", file_name = f"cfv {set_num}_scrapper") ###Change directory accordingly
+                file.add(card_data)
                 print("Card added into db")
                 break
             
