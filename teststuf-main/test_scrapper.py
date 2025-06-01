@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from cfv_sorter_link_scrapper import extract_info
 from command.tools.ArcaneUtils import fetch_json
 import os
-
+import json
 mode = 'extract'  ##change accordingly
 
 path_to_file = r'C:/Users/tanwe/Desktop/scrapper/'  ###Path where you want your source.txt to be
@@ -96,7 +96,19 @@ if mode != 'scrape':
                 folder_name = f"{set_num}"
                 if not os.path.exists(folder_name):
                     os.makedirs(folder_name)
-                wbp.get_img("C:/Users/tanwe/Desktop/scrapper/teststuf-main", serial_num)
+                if not os.path.exists(f"{folder_name}/cfv_{set_num}_product_info.json"):
+                    product_file = fetch_json(directory = f"{set_num}", file_name = f"cfv_{set_num}_product_info")
+                    product_info = wbp.get_set_info()
+                else:
+                    json_path = f"{folder_name}/cfv_{set_num}_product_info.json"
+                    with json_path.open('r') as json_file:
+                        json_data = json.load(json_file)
+                    json_data = json_data[0] ##First item is the dictionary with all the info 
+                    json_data["total"] = json_data.get("total") + 1
+                    with json_path.open('w') as json_file:
+                        json.dump(list(json_data), json_file)
+                    print(f"Total count increased by 1 for {set_num}")
+                wbp.get_img("C:/Users/tanwe/Desktop/scrapper/teststuf-main", serial_num)  ##Directory of folder where you want to have all your folders to be created in
                 file = fetch_json(directory = f"{set_num}", file_name = f"cfv {set_num}_scrapper") ###Change directory accordingly
                 file.add(card_data)
                 print("Card added into db")

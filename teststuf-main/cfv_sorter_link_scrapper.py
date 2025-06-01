@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import os
 
-
 class extract_info():
 
     def __init__(self, url):
@@ -55,21 +54,61 @@ class extract_info():
             print(self)
 
         card_info = {
-        "serial number": serial_num,
+        "product_code": serial_num,
         "name": name.text,
-        "type": typ.text,
-        "nation": nation.text,
-        "race": race.text,
-        "grade": grade.text,
-        "power": power.text,
-        "critical": critical.text,
-        "shield": shield.text,
-        "skill": skill.text,
-        "effect": effect.text,
-        "flavor": flavor.text,
+        "description": skill.text,
         "rarity": rarity.text
         }
         return card_info
+    
+    def get_set_info(self): 
+        ##Not every set has info on it so this will skip all the sets if no info regarding the set can be loaded up
+
+        card_website = self.url.split('/')
+        for parts in card_website:
+            if "cardno" in parts:
+                card_code = parts
+                break
+        card_code = card_code.split("cardno=")[1]
+        set_product_code = card_code
+        card_code = ''.join(filter(str.isalnum, card_code))
+        card_code = card_code.lower()
+        product_site = "https://en.cf-vanguard.com/products/" + card_code
+        try:
+            product_page = requests.get(product_site)
+            soup = BeautifulSoup(product_page.content, "html,parser")
+            name = soup.find("div", class_= "title")
+            table = soup.find('table')
+            for row in table.find_all('tr'):
+                table_header = row.find('th')
+                value = row.find('td')
+                if table_header and value:
+                    header_text = table_header.text.strip()
+                    value_text = value.text.strip()
+                    
+                    if header_text == 'Release Date':
+                        release_date = value_text
+                    elif header_text == 'Card Types':
+                        card_types = value_text
+            game_info = {
+                "setname": name,
+                "set_description":card_types,
+                "set_product_code":set_product_code,
+                "release_date":release_date,
+                "variant_id":null,
+                "set_id":null,
+                "status":"published",
+                "total": 0
+            }
+            return game_info
+
+        except:
+            print(f"{set_product_code} is not a valid product, might be a tournament exclusive")
+        
+
+
+
+
 
 
 
